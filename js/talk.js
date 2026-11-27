@@ -34,8 +34,32 @@
     });
   }
 
+  // Spoken text never says the name for now (TTS mispronounces it); on-screen text keeps it.
+  // Mirrors voice/pron.py strip_name, which the voice server also applies.
+  const NAME_STRIP = [
+    [/\bThis is Hyperion[.!]\s*/gi, ""],
+    [/\bHyperion here\b[.,!]?\s*/gi, "Standing by. "],
+    [/\b(I am|I'm) Hyperion([.!?])/gi, "$1 here$2"],
+    [/\b(I am|I'm) Hyperion\b,?\s*/gi, "$1 your "],
+    [/\bHyperion's\b/gi, "my"],
+    [/\bHyperion is\b/gi, "I am"],
+    [/\bHyperion has\b/gi, "I have"],
+    [/\bHyperion (was|will|can|knows|remembers)\b/gi, "I $1"],
+    [/\b(ask|tell|thank|call|ping|message) Hyperion\b/gi, "$1 me"],
+    [/,?\s*\bHyperion\b,?/gi, ""],
+  ];
+  function speechText(text) {
+    let t = String(text || "");
+    for (const [rx, rep] of NAME_STRIP) t = t.replace(rx, rep);
+    t = t.replace(/\s{2,}/g, " ").replace(/\s+([.,!?])/g, "$1").trim().replace(/^[,.;:!?\s]+/, "");
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+  window.__speechText = speechText;
+
   // Live replies: his cloned voice from the TTS server when configured, otherwise the browser's voice.
   async function speakReply(text) {
+    text = speechText(text);
+    if (!text) return;
     if (/^https?:\/\//.test(CFG.ttsUrl || "")) {
       try {
         const r = await fetch(CFG.ttsUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ bot: "hyperion", text }) });
@@ -43,7 +67,7 @@
       } catch (e) { console.warn("tts unavailable", e); }
     }
     if (!window.speechSynthesis) return;
-    const u = new SpeechSynthesisUtterance(text.replace(/\bHyperion\b/g, "High-peer-ee-on"));
+    const u = new SpeechSynthesisUtterance(text);
     u.rate = 0.95; u.pitch = 0.75;
     orb.setState("talking"); status("Speaking");
     const pulse = setInterval(() => orb.setLevel(0.25 + Math.random() * 0.5), 110);

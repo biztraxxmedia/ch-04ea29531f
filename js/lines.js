@@ -4,7 +4,7 @@ window.LINES = {
   "greet": [
    {
     "id": "hyp_greet_1",
-    "text": "Greetings, Tenno. I am Hyperion, cephalon of the Umbra Federation. Systems online.",
+    "text": "Greetings, Tenno. Guardian cephalon of the Umbra Federation, at your service. Systems online.",
     "audio": "audio/hyp_greet_1.mp3"
    },
    {
@@ -39,7 +39,7 @@ window.LINES = {
  "talk": {
   "welcome": {
    "id": "hyp_t_welcome",
-   "text": "Greetings, Tenno. This is Hyperion. Ask me something. Type it, or tap the mic.",
+   "text": "Greetings, Tenno. Your tactician is listening. Ask me something. Type it, or tap the mic.",
    "audio": "audio/hyp_t_welcome.mp3"
   },
   "hello": {
@@ -49,7 +49,7 @@ window.LINES = {
   },
   "who": {
    "id": "hyp_t_who",
-   "text": "I am Hyperion, guardian cephalon of the Umbra Federation. Tactician, archivist, and the one who remembers your Arcanes when you forget.",
+   "text": "I am the guardian cephalon of the Umbra Federation. Tactician, archivist, and the one who remembers your Arcanes when you forget.",
    "audio": "audio/hyp_t_who.mp3"
   },
   "help": {
