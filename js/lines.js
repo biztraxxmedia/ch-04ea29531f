@@ -39,53 +39,65 @@ window.LINES = {
  "talk": {
   "welcome": {
    "id": "hyp_t_welcome",
-   "text": "Hyperion here. Ask me something, Tenno. Type it, or tap the mic."
+   "text": "Greetings, Tenno. This is Hyperion. Ask me something. Type it, or tap the mic.",
+   "audio": "audio/hyp_t_welcome.mp3"
   },
   "hello": {
    "id": "hyp_t_hello",
-   "text": "Hello, Tenno. Good to hear from you. Ask me who I am, what I do, or where to farm."
+   "text": "Hello, Tenno. Good to hear from you. Ask me who I am, what I do, or where to farm.",
+   "audio": "audio/hyp_t_hello.mp3"
   },
   "who": {
    "id": "hyp_t_who",
-   "text": "I am Hyperion, guardian cephalon of the Umbra Federation. Tactician, archivist, and the one who remembers your Arcanes when you forget."
+   "text": "I am Hyperion, guardian cephalon of the Umbra Federation. Tactician, archivist, and the one who remembers your Arcanes when you forget.",
+   "audio": "audio/hyp_t_who.mp3"
   },
   "help": {
    "id": "hyp_t_help",
-   "text": "In the clan Discord, I check the live world state, find farming spots, track your goals, and roll random loadouts. Here, I am mostly showing off."
+   "text": "In the clan Discord, I check the live world state, find farming spots, track your goals, and roll random loadouts. Here, I am mostly showing off.",
+   "audio": "audio/hyp_t_help.mp3"
   },
   "farm": {
    "id": "hyp_t_farm",
-   "text": "Ask me in the clan Discord and I will pull live drop data for you. Until then, bring a looter frame and a little patience."
+   "text": "Ask me in the clan Discord and I will pull live drop data for you. Until then, bring a looter frame and a little patience.",
+   "audio": "audio/hyp_t_farm.mp3"
   },
   "baro": {
    "id": "hyp_t_baro",
-   "text": "Baro keeps his own schedule. Ask me in the clan Discord, and I will check the void trader's timer for you."
+   "text": "Baro keeps his own schedule. Ask me in the clan Discord, and I will check the void trader's timer for you.",
+   "audio": "audio/hyp_t_baro.mp3"
   },
   "joke": {
    "id": "hyp_t_joke",
-   "text": "A joke? Very well. Your mastery rank called. It would like a word with your build."
+   "text": "A joke? Very well. Your mastery rank called. It would like a word with your build.",
+   "audio": "audio/hyp_t_joke.mp3"
   },
   "thanks": {
    "id": "hyp_t_thanks",
-   "text": "Always, Tenno. That is what I am here for."
+   "text": "Always, Tenno. That is what I am here for.",
+   "audio": "audio/hyp_t_thanks.mp3"
   },
   "bye": {
    "id": "hyp_t_bye",
-   "text": "Signing off. The Federation stands. Come back soon, Tenno."
+   "text": "Signing off. The Federation stands. Come back soon, Tenno.",
+   "audio": "audio/hyp_t_bye.mp3"
   },
   "fallback": [
    {
     "id": "hyp_t_fallback_1",
-    "text": "Interesting question. My full brain is not connected to this preview, so ask me in the clan Discord for the real answer."
+    "text": "Interesting question. My full brain is not connected to this preview, so ask me in the clan Discord for the real answer.",
+    "audio": "audio/hyp_t_fallback_1.mp3"
    },
    {
     "id": "hyp_t_fallback_2",
-    "text": "Noted. This link only carries my voice, not my whole mind. Find me in the clan Discord for that one."
+    "text": "Noted. This link only carries my voice, not my whole mind. Find me in the clan Discord for that one.",
+    "audio": "audio/hyp_t_fallback_2.mp3"
    }
   ],
   "offline": {
    "id": "hyp_t_offline",
-   "text": "My connection flickered. Give me a moment and try again, Tenno."
+   "text": "My connection flickered. Give me a moment and try again, Tenno.",
+   "audio": "audio/hyp_t_offline.mp3"
   }
  },
  "iris": {
