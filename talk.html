@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#030304">
+<title>Talk to Hyperion</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='10' fill='none' stroke='%23ff2a24' stroke-width='2.5'/%3E%3Cellipse cx='16' cy='14' rx='5' ry='1.6' fill='%23ffd21a'/%3E%3Cellipse cx='16' cy='29' rx='8' ry='2' fill='%23ff2a24'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/hub.css">
+<link rel="stylesheet" href="css/talk.css">
+</head>
+<body class="talk">
+<header class="top">
+  <a class="pill" href="index.html">← All cephalons</a>
+  <span class="mode" id="mode">Demo mode</span>
+</header>
+<main class="talk-wrap">
+  <div class="holo-col">
+    <canvas id="holo" aria-hidden="true"></canvas>
+    <div class="status" id="status">Standing by</div>
+  </div>
+  <section class="chat">
+    <div class="log" id="log" aria-live="polite"></div>
+    <p class="demo-note" id="demoNote">Preview link: Hyperion's full brain isn't connected here, so he answers from a set of pre-recorded lines in his own voice.
+      Try: <button class="chip">Who are you?</button><button class="chip">What can you do?</button><button class="chip">Tell me a joke</button><button class="chip">Where do I farm?</button></p>
+    <form class="dock" id="dock" autocomplete="off">
+      <button type="button" class="mic" id="mic" aria-label="Speak to Hyperion" title="Speak">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V7a3 3 0 1 0-6 0v4a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+      </button>
+      <label class="sr" for="msg">Message</label>
+      <input id="msg" maxlength="500" placeholder="Say something to Hyperion…" enterkeyhint="send">
+      <button class="send" id="send" type="submit">Send</button>
+    </form>
+  </section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/holo.js"></script>
+<script src="js/lines.js"></script>
+<script src="js/talk.js"></script>
+</body>
+</html>

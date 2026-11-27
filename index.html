@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#030304">
+<title>Cephalon Hub</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='10' fill='none' stroke='%23ff2a24' stroke-width='2.5'/%3E%3Cellipse cx='16' cy='14' rx='5' ry='1.6' fill='%23ffd21a'/%3E%3Cellipse cx='16' cy='29' rx='8' ry='2' fill='%23ff2a24'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/hub.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><b>◆</b> <span class="long">Umbra Federation · </span>Cephalons</div>
+  <a class="pill" href="talk.html">Talk to Hyperion →</a>
+</header>
+
+<main>
+  <section class="stage" aria-label="Cephalons">
+    <button class="pod side" data-bot="iris" aria-label="Hear Iris">
+      <canvas aria-hidden="true"></canvas>
+      <span class="name"><b>Iris</b></span><span class="role">Arts · emblems · song</span>
+    </button>
+    <button class="pod main" data-bot="hyperion" aria-label="Hear Hyperion">
+      <canvas aria-hidden="true"></canvas>
+      <span class="name"><b>Hyperion</b></span><span class="role">Guardian of the Federation</span>
+    </button>
+    <button class="pod side" data-bot="hermes" aria-label="Hear Hermes">
+      <canvas aria-hidden="true"></canvas>
+      <span class="name"><b>Hermes</b></span><span class="role">Messenger</span>
+    </button>
+  </section>
+
+  <section class="caption" aria-live="polite">
+    <div class="who" id="who">Tap a cephalon</div>
+    <p class="line" id="line">Hyperion is standing by. Tap him to hear his voice.</p>
+  </section>
+
+  <div class="controls">
+    <button class="btn" id="wake">▶ Wake Hyperion</button>
+    <button class="btn alt" id="react">React</button>
+    <a class="btn alt" href="talk.html" style="text-decoration:none">Talk to him</a>
+  </div>
+</main>
+<p class="foot">Holographic preview · voices rendered offline</p>
+
+<script src="js/holo.js"></script>
+<script src="js/lines.js"></script>
+<script src="js/hub.js"></script>
+</body>
+</html>

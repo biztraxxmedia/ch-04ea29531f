@@ -1,0 +1,50 @@
+:root { --red:#ff2a24; --yel:#ffd21a; --ink:#e9e6e2; --dim:#8b8580; --bg:#030304; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+  font: 15px/1.45 "Segoe UI", Roboto, system-ui, -apple-system, sans-serif; }
+body { background: radial-gradient(120% 80% at 50% 105%, #2a0605 0%, #0b0203 38%, var(--bg) 70%); overflow-x: hidden; }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 5;
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0 1px, transparent 1px 3px); }
+a { color: var(--yel); }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; gap: 12px; }
+.brand { font-weight: 700; letter-spacing: .32em; font-size: 12px; color: var(--yel); text-transform: uppercase; }
+.brand b { color: var(--red); }
+.pill { border: 1px solid rgba(255,210,26,.35); color: var(--yel); border-radius: 999px; padding: 6px 14px; text-decoration: none;
+  font-size: 13px; background: rgba(255,210,26,.06); }
+.pill:hover { background: rgba(255,210,26,.14); }
+.stage { display: grid; grid-template-columns: 1fr 1.9fr 1fr; align-items: end; gap: 0 1vw; max-width: 1280px; margin: 0 auto; padding: 0 2vw; }
+.pod { position: relative; display: flex; flex-direction: column; align-items: center; cursor: pointer; border: 0; background: none;
+  color: inherit; font: inherit; padding: 0; -webkit-tap-highlight-color: transparent; }
+.pod canvas { width: 100%; aspect-ratio: 1 / 1.28; display: block; }
+.pod.main canvas { max-height: 68vh; }
+.pod.side canvas { max-height: 42vh; }
+.pod .name { margin-top: -4px; font-size: 13px; letter-spacing: .28em; text-transform: uppercase; color: var(--dim); transition: color .2s; }
+.pod.main .name { font-size: 17px; color: var(--ink); }
+.pod[data-bot=hyperion] .name b { color: var(--red); }
+.pod[data-bot=iris] .name b { color: #9dffb4; }
+.pod[data-bot=hermes] .name b { color: #ffd27a; }
+.pod .role { font-size: 12px; color: var(--dim); margin-top: 2px; }
+.pod:focus-visible { outline: 1px dashed var(--yel); outline-offset: 4px; }
+.pod.speaking .name { color: var(--ink); text-shadow: 0 0 12px currentColor; }
+.caption { min-height: 4.2em; max-width: 760px; margin: 10px auto 0; padding: 0 20px; text-align: center; }
+.caption .who { font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--yel); min-height: 1.4em; }
+.caption .line { font-size: 18px; margin: 4px 0 0; color: var(--ink); }
+.controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 16px 0 10px; padding: 0 16px; }
+.btn { border: 1px solid rgba(255,42,36,.55); background: linear-gradient(180deg, rgba(255,42,36,.22), rgba(255,42,36,.06));
+  color: var(--ink); border-radius: 10px; padding: 11px 18px; font: inherit; font-weight: 600; cursor: pointer; }
+.btn.alt { border-color: rgba(255,210,26,.45); background: rgba(255,210,26,.07); }
+.btn:hover { filter: brightness(1.25); }
+.btn:disabled { opacity: .5; cursor: default; }
+.foot { text-align: center; color: #5d5853; font-size: 12px; padding: 18px 16px 28px; }
+@media (max-width: 640px) {
+  .top { padding: 10px 12px; }
+  .brand { letter-spacing: .2em; font-size: 11px; }
+  .stage { grid-template-columns: 1fr 1.8fr 1fr; gap: 0; padding: 0 4px; margin-top: 6px; }
+  .pod .name { font-size: 10px; letter-spacing: .16em; margin-top: 4px; }
+  .pod.main canvas { max-height: 54vh; }
+  .brand .long { display: none; }
+  .pill { padding: 6px 12px; white-space: nowrap; }
+  .pod.main .name { font-size: 14px; }
+  .pod .role { display: none; }
+  .caption .line { font-size: 16px; }
+}
